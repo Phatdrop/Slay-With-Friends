@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Crawler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dungeon Crawler</h1>
+    </header>
+    <div class="game">
+        <section class="creature container">
+            <h2>Creature Health</h2>
+            <div class="healthbar">
+                <progress id="creatureHealth" class="healthbar__value" max="500" value="500"></progress>
+            </div>
+        </section>
+        <section class="party container">
+            <h2>Party Health</h2>
+            <div class="healthbar">
+                <progress id="member1Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+            <div class="healthbar">
+                <progress id="member2Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+            <div class="healthbar">
+                <progress id="member3Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+            <div class="healthbar">
+                <progress id="member4Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+            <div class="healthbar">
+                <progress id="member5Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+        </section>
+        <div id="controls" class="controls button">
+            <button data-action="attack" id="attackButton" aria-label="Attack the creature">ATTACK</button>
+            <button data-action="heal_tank" id="healTankButton" aria-label="Heal the tank">HEAL TANK</button>
+            <button data-action="heal_dps1" id="healDPS1Button" aria-label="Heal DPS1">HEAL DPS1</button>
+            <button data-action="heal_dps2" id="healDPS2Button" aria-label="Heal DPS2">HEAL DPS2</button>
+            <button data-action="heal_healer" id="healHealerButton" aria-label="Heal the healer">HEAL HEALER</button>
+            <button data-action="heal_dps3" id="healDPS3Button" aria-label="Heal DPS3">HEAL DPS3</button>
+            <button id="startGameButton" aria-label="Start the game">START GAME</button>
+        </div>
+        <section class="log container">
+            <h2>Battle Log</h2>
+            <div id="log-window">
+                <ul id="log"></ul>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
