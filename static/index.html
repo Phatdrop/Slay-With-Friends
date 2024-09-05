@@ -3,35 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monster Slayer</title>
+    <title>Dungeon Crawler</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Monster Slayer</h1>
+        <h1>Dungeon Crawler</h1>
     </header>
-    <div id="game">
-        <section id="monster" class="container">
-            <h2>Monster Health</h2>
+    <div class="game">
+        <section class="creature container">
+            <h2>Creature Health</h2>
             <div class="healthbar">
-                <div id="monster-health" class="healthbar__value"></div>
+                <progress id="creatureHealth" class="healthbar__value" max="500" value="500"></progress>
             </div>
         </section>
-        <section id="player" class="container">
-            <h2>Your Health</h2>
+        <section class="party container">
+            <h2>Party Health</h2>
             <div class="healthbar">
-                <div id="player-health" class="healthbar__value"></div>
+                <progress id="member1Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+            <div class="healthbar">
+                <progress id="member2Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+            <div class="healthbar">
+                <progress id="member3Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+            <div class="healthbar">
+                <progress id="member4Health" class="healthbar__value" max="100" value="100"></progress>
+            </div>
+            <div class="healthbar">
+                <progress id="member5Health" class="healthbar__value" max="100" value="100"></progress>
             </div>
         </section>
-        <section id="controls">
-            <button id="attack-btn">ATTACK</button>
-            <button id="special-attack-btn">SPECIAL ATTACK</button>
-            <button id="heal-btn">HEAL</button>
-            <button id="surrender-btn">SURRENDER</button>
-        </section>
-        <section id="log" class="container">
+        <div id="controls" class="controls button">
+            <button data-action="attack" id="attackButton" aria-label="Attack the creature">ATTACK</button>
+            <button data-action="heal_tank" id="healTankButton" aria-label="Heal the tank">HEAL TANK</button>
+            <button data-action="heal_dps1" id="healDPS1Button" aria-label="Heal DPS1">HEAL DPS1</button>
+            <button data-action="heal_dps2" id="healDPS2Button" aria-label="Heal DPS2">HEAL DPS2</button>
+            <button data-action="heal_healer" id="healHealerButton" aria-label="Heal the healer">HEAL HEALER</button>
+            <button data-action="heal_dps3" id="healDPS3Button" aria-label="Heal DPS3">HEAL DPS3</button>
+            <button id="startGameButton" aria-label="Start the game">START GAME</button>
+        </div>
+        <section class="log container">
             <h2>Battle Log</h2>
-            <ul id="log-messages"></ul>
+            <div id="log-window">
+                <ul id="log"></ul>
+            </div>
         </section>
     </div>
     <script src="script.js"></script>
