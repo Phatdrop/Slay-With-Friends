@@ -1,5 +1,5 @@
 # Slay-With-Friends
-<<<<<<< HEAD
+
 Monster slaying game, but with friends!
 =======
 
