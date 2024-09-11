@@ -26,4 +26,3 @@ Monster slaying game, but with friends!
    ```sh
    git clone https://github.com/your-username/Slay-With-Friends.git
    cd Slay-With-Friends
->>>>>>> master
